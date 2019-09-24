@@ -19,6 +19,7 @@
 # Imports python modules
 from os import listdir
 
+
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
 #       with this function
@@ -40,6 +41,28 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    results_dic = dict()
+
+    file_names = listdir(image_dir)
+
+    for file_name in file_names:
+
+        if file_name[0] != ".":
+            pet_name_label = ''
+
+            for name in file_name.split("_"):
+
+                if name.isalpha():
+                    pet_name_label += ' ' + (name.strip().lower())
+                pet_name_label = pet_name_label.strip()
+
+            if file_name not in results_dic:
+                results_dic[file_name] = [pet_name_label]
+            else:
+                print('** Warning: Duplicate files exist in directory: ', file_name)
+
+    # Check result: print(results_dic)
+
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+    return results_dic
