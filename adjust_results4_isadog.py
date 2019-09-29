@@ -98,5 +98,5 @@ def adjust_results4_isadog(results_dic, dogfile):
             else:
                 results_dic[key].append(0)
 
-    print(dognames_dic)
-    print(results_dic)
+    # print(dognames_dic)
+    # print(results_dic)
