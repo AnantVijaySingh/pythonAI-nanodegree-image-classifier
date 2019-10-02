@@ -1,0 +1,8 @@
+# Total Images: 40
+# Dog Images: 30
+# Not-a-dog Images: 10
+
+CNN Model Architectire     Not-A-Dog Correct     Dog Correct     Breeds Correct     Match Label
+ResNet                     56.25                 83.33           100.00             82.50
+AlexNet                    47.37                 85.71           100.00             75.00
+VGG                        66.67                 84.00           100.00             87.50

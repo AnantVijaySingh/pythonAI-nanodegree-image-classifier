@@ -82,7 +82,14 @@ def adjust_results4_isadog(results_dic, dogfile):
                 if dog.strip() not in dognames_dic.keys():
                     dognames_dic[dog] = 1
 
+            # Using whole line instead of each individual name in the key
+            # if formatted_line not in dognames_dic.keys():
+            #     dognames_dic[formatted_line] = 1
+
                 line = dognames_file.readline()
+
+    print('-----checking-----')
+    print(dognames_dic)
 
     for key in results_dic:
         # Pet Image Label IS of Dog (e.g. found in dognames_dic)
